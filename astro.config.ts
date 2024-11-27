@@ -24,7 +24,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'static',
+  output: 'hybrid',
 
   integrations: [
     tailwind({
@@ -89,6 +89,5 @@ export default defineConfig({
       },
     },
   },
-
   adapter: cloudflare(),
 });
